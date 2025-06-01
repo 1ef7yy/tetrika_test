@@ -5,11 +5,10 @@ import csv
 
 
 def get_animals_count() -> dict[str, int]:
-    URL = "https://ru.wikipedia.org/wiki/Категория:Животные_по_алфавиту"
     letter_counts = {}
 
     while True:
-        response = requests.get(URL)
+        response = requests.get()
         soup = BeautifulSoup(response.text, "html.parser")
 
         category_groups = soup.find("div", class_="mw-category-columns")

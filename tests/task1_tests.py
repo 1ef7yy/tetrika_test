@@ -1,5 +1,5 @@
 import pytest
-from solution import strict
+from task1.solution import strict
 
 
 def test_correct_types():
